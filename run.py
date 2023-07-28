@@ -9,9 +9,9 @@ import re
 load_dotenv()
 
 
-PROXY = "customer-scrapingdojo-cc-us-sessid-0870241768-sesstime-10:vdU232Kc!FQacCq@pr.oxylabs.io:7777"
-INPUT_URL= "http://quotes.toscrape.com/js-delayed/"
-OUTPUT_FILE= "output.jsonl"
+PROXY = os.getenv("PROXY")
+INPUT_URL = os.getenv("INPUT_URL")
+OUTPUT_FILE = os.getenv("OUTPUT_FILE")
 
 proxies = {
     "http": f"http://{PROXY}",
